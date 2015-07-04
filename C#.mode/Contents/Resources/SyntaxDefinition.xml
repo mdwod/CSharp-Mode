@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE syntax SYSTEM "syntax.dtd">
+<syntax>
+	<head>
+		<name>CSharp</name> 
+		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@$]]></charsintokens>
+	</head>
+	
+	<states>
+		<default id="Base" scope="meta.default">
+			
+			<keywords id="Primitive Types" useforautocomplete="yes" scope="keyword.type">
+				<string>bool</string>
+				<string>byte</string>
+				<string>char</string>
+				<string>decimal</string>
+				<string>double</string>
+				<string>float</string>
+				<string>int</string>
+				<string>long</string>
+				<string>sbyte</string>
+				<string>short</string>
+				<string>uint</string>
+				<string>ulong</string>
+				<string>ushort</string>
+			</keywords>
+			
+			<keywords id="Predefined Types" useforautocomplete="yes" scope="keyword.type">
+				<string>string</string>
+				<string>object</string>
+			</keywords>
+			
+			<keywords id="Framework Types" useforautocomplete="yes" scope="support.type">
+				<string>System.Boolean</string>
+				<string>System.Byte</string>
+				<string>System.SByte</string>
+				<string>System.Char</string>
+				<string>System.Decimal</string>
+				<string>System.Double</string>
+				<string>System.Single</string>
+				<string>System.Int32</string>
+				<string>System.UInt32</string>
+				<string>System.Int64</string>
+				<string>System.UInt64</string>
+				<string>System.Object</string>
+				<string>System.Int16</string>
+				<string>System.UInt16</string>
+				<string>System.String</string>
+			</keywords>							
+			
+			<keywords id="Constant Keywords" useforautocomplete="yes" scope="keyword.constant">
+				<string>false</string>
+				<string>null</string>
+				<string>true</string>
+			</keywords>
+			
+			<keywords id="Keywords" useforautocomplete="yes" scope="keyword">
+				<string>abstract</string>
+				<string>as</string>
+				<string>base</string>
+				<string>break</string>
+				<string>case</string>
+				<string>catch</string>
+				<string>checked</string>
+				<string>class</string>
+				<string>const</string>
+				<string>continue</string>
+				<string>default</string>
+				<string>delegate</string>
+				<string>do</string>
+				<string>else</string>
+				<string>enum</string>
+				<string>event</string>
+				<string>explicit</string>
+				<string>extern</string>
+				<string>finally</string>
+				<string>fixed</string>
+				<string>for</string>
+				<string>foreach</string>
+				<string>goto</string>
+				<string>if</string>
+				<string>implicit</string>
+				<string>in</string>
+				<string>interface</string>
+				<string>internal</string>
+				<string>is</string>
+				<string>lock</string>
+				<string>namespace</string>
+				<string>new</string>
+				<string>operator</string>
+				<string>out</string>
+				<string>override</string>
+				<string>params</string>
+				<string>private</string>
+				<string>protected</string>
+				<string>public</string>
+				<string>readonly</string>
+				<string>ref</string>
+				<string>return</string>
+				<string>sealed</string>
+				<string>sizeof</string>
+				<string>stackalloc</string>
+				<string>static</string>
+				<string>struct</string>
+				<string>switch</string>
+				<string>this</string>
+				<string>throw</string>
+				<string>try</string>
+				<string>typeof</string>
+				<string>unchecked</string>
+				<string>unsafe</string>
+				<string>using</string>
+				<string>virtual</string>
+				<string>void</string>
+				<string>volatile</string>
+				<string>while</string>
+			</keywords>
+            
+            <!-- Uses the CSS Numbers Color -->
+			<keywords id="Numbers" useforautocomplete="yes" scope="style.value.numeric">
+				<regex>(?&lt;=[^[A-Za-z0-9]]|^)((([0-9]+\.[0-9]*)|(\.[0-9]+)([eE][+\-]?[0-9]+)?[fFlL]?)|((([0-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]))(([uU][lL]?)|([lL][uU]?))?))(?=[^[A-Za-z0-9]]|$)</regex>
+			</keywords>
+            
+			
+			<state id="AutodocComment" type="comment" scope="comment.block.documentation">
+				<begin><string>/\*"</string></begin>
+				<end><regex>"\*/</regex></end>
+			</state>
+			
+            <!-- Defines the Comment in Prefenrences -->
+			<state id="Comment" type="comment" scope="comment.block">
+				<begin><string>/\*</string></begin>
+				<end><regex>\*/</regex></end>
+			</state>
+			
+            <!-- Defines the Comment in Prefenrences -->
+			<state id="SingleComment" type="comment" scope="comment.line.double-slash">
+				<begin><string>//</string></begin>
+				<end><regex>[\n\r]</regex></end>
+			</state>
+			
+			<state id="Preprocessor" foldable="yes" indent="yes" scope="language.preprocessor">
+				<begin><string>#</string></begin>
+				<end><regex>[\n\r]</regex></end>
+			</state>
+			
+            <!-- Defines the String in Preferences -->
+			<state id="String" type="string" foldable="no" scope="string.double">
+				<begin><string>"</string></begin>
+				<end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
+			</state>
+			
+			<state id="Block" type="block" foldable="yes" indent="yes" scope="meta.block">
+				<begin>
+					<regex>{</regex>
+					<autoend>}</autoend>
+				</begin>
+				<end>
+					<regex>}</regex>
+				</end>
+				<import/>
+			</state>            
+			
+		</default>
+	</states>
+</syntax>
