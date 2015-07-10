@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE syntax SYSTEM "syntax.dtd">
 <syntax>
-	<head>
+  <head>
 		<name>CSharp</name> 
+	
 		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@$]]></charsintokens>
 	</head>
 	
@@ -29,23 +30,22 @@
 				<string>string</string>
 				<string>object</string>
 			</keywords>
-			
+            
+			<!-- System Namespaces -->
 			<keywords id="Framework Types" useforautocomplete="yes" scope="support.type">
-				<string>System.Boolean</string>
-				<string>System.Byte</string>
-				<string>System.SByte</string>
-				<string>System.Char</string>
-				<string>System.Decimal</string>
-				<string>System.Double</string>
-				<string>System.Single</string>
-				<string>System.Int32</string>
-				<string>System.UInt32</string>
-				<string>System.Int64</string>
-				<string>System.UInt64</string>
-				<string>System.Object</string>
-				<string>System.Int16</string>
-				<string>System.UInt16</string>
-				<string>System.String</string>
+				<string>System</string>
+        <string>System.Collections</string>
+				<string>System.Collections.Generic</string>
+        <string>System.ComponentModel</string>
+        <string>System.Data</string>
+        <string>System.Drawing</string>
+        <string>System.Linq</string>
+        <string>System.Text</string>
+        <string>System.Threading</string>
+        <string>System.Windows.Forms</string>
+        <string>System.IO</string>
+        <string>System.Xaml</string>
+        <string>System.Xml</string>
 			</keywords>							
 			
 			<keywords id="Constant Keywords" useforautocomplete="yes" scope="keyword.constant">
@@ -94,6 +94,7 @@
 				<string>private</string>
 				<string>protected</string>
 				<string>public</string>
+				<string>partial</string>
 				<string>readonly</string>
 				<string>ref</string>
 				<string>return</string>
@@ -114,6 +115,19 @@
 				<string>void</string>
 				<string>volatile</string>
 				<string>while</string>
+                
+        <!-- Interfaces -->
+        <string>IAsyncResult</string>
+        <string>ICloneable</string>
+        <string>IComparable</string>
+        <string>IConvertible</string>
+        <string>ICustomFormatter</string>
+        <string>IDisposable</string>
+        <string>IEquatable</string>
+        <string>IFormatProvider</string>
+        <string>IFormattable</string>
+        <string>IObservable</string>
+        <string>IServiceProvider</string>
 			</keywords>
             
             <!-- Uses the CSS Numbers Color -->

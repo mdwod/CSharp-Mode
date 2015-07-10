@@ -7,9 +7,9 @@
 	<key>CFBundleName</key>
 	<string>C#</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleGetInfoString</key>
 	<string>1.0, Created by Pierre Haas (Credit to Renaud Gaudins and The Coding Monkeys)</string>
 	<key>CFBundlePackageType</key>

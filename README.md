@@ -1,4 +1,4 @@
-# Coda 2 C# mode
+## Coda 2 Editor C# mode
 
 ![Logo](csharp-mode-preview.png "Logo")
 
@@ -9,3 +9,33 @@ I found and used the basic layout from [Renaud Gaudins](http://www.codingmonkeys
 ## Additional Information
 
 This mode was hacked together so it still needs some work - Please consider that before installing it. The C# numeric syntax highlight uses the CSS highlight from Coda, so you have to change the CSS numeric color to change the C# numeric color.
+
+### New in Version 1.1
+
+1. Added **System Namespaces**
+	- System
+  - System.Collections
+	- System.Collections.Generic
+  - System.ComponentModel
+  - System.Data
+  - System.Drawing
+  - System.Linq
+  - System.Text
+  - System.Threading
+  - System.Windows.Forms
+  - System.IO
+  - System.Xaml
+  - System.Xml
+  
+2. Added **Interfaces**
+	- IAsyncResult
+	- ICloneable
+	- IComparable
+	- IConvertible
+	- ICustomFormatter
+	- IDisposable
+	- IEquatable
+	- IFormatProvider
+	- IFormattable
+	- IObservable
+	- IServiceProvider
